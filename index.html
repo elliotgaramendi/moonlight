@@ -7,10 +7,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LP Moonlight Parallax JS</title>
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 
-<body>
-  <h1>LP Moonlight Parallax JS</h1>
+<body class="body">
+  <header class="header">
+    <nav class="header-nav">
+      <div class="header-nav-container">
+        <a href="#" class="header-nav__logo-container">
+          <img src="./img/moon.png" alt="Logo Web" class="header-nav__logo" />
+        </a>
+        <figure class="header-nav__menu-icon-container" id="headerNavMenuIconContainer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="header-nav__menu-icon">
+            <path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path>
+          </svg>
+        </figure>
+        <ul class="header-nav__menu-link-list">
+          <li class="header-nav__menu-link-item">
+            <a href="#" class="header-nav__menu-link">Cursos</a>
+          </li>
+          <li class="header-nav__menu-link-item">
+            <a href="#" class="header-nav__menu-link">Nosotros</a>
+          </li>
+          <li class="header-nav__menu-link-item">
+            <a href="#" class="header-nav__menu-link">Contacto</a>
+          </li>
+          <li class="header-nav__menu-link-item">
+            <a href="https://www.linkedin.com/in/elliotgaramendi/"
+              class="header-nav__menu-link header-nav__menu-link--active" target="_blank" rel="noopener noreferrer">Elliot</a>
+          </li>
+          <li class="header-nav__menu-link-item header-nav__menu-close-icon-container"
+            id="headerNavMenuCloseIconContainer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="header-nav__menu-close-icon">
+              <path
+                d="M9.172 16.242 12 13.414l2.828 2.828 1.414-1.414L13.414 12l2.828-2.828-1.414-1.414L12 10.586 9.172 7.758 7.758 9.172 10.586 12l-2.828 2.828z">
+              </path>
+              <path
+                d="M12 22c5.514 0 10-4.486 10-10S17.514 2 12 2 2 6.486 2 12s4.486 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8z">
+              </path>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
