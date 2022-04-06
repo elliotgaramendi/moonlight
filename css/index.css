@@ -9,18 +9,18 @@
   --button-text-color: #000;
   --padding-section: 2em 0;
   --padding-container: 0 2em;
+  --max-width-section: 1024px;
   --primary-highlight: #61dafb;
   --secondary-highlight: #ffd700;
-  --border-radius: 0.5rem;
+  --border-radius: 1rem;
   --all-transitions: all 0.25s;
 }
 
 .body {
-  background-image: linear-gradient(var(--primary-theme-color), var(--secondary-theme-color));
-  font-family: 'Poppins', sans-serif;
+  background-color: var(--primary-theme-color);
   color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  transition: var(--all-transitions);
   min-height: 200vh;
 }
 
@@ -51,7 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1024px;
+  max-width: var(--max-width-section);
   margin: auto;
   padding: var(--padding-container);
 }
@@ -77,16 +77,16 @@
 }
 
 .header-nav__menu-link-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   background-image: linear-gradient(to top, var(--primary-theme-color), var(--secondary-theme-color));
   margin: 0;
   padding: 0;
@@ -107,10 +107,10 @@
 
 .header-nav__menu-link {
   color: var(--text-color);
-  text-decoration: none;
   font-weight: 600;
   padding: 0.25em 1em;
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
   transition: var(--all-transitions);
 }
 
@@ -133,7 +133,102 @@
   height: 100%;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  background-image: linear-gradient(var(--primary-theme-color), var(--secondary-theme-color));
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  background-image: linear-gradient(to top, var(--primary-theme-color), transparent);
+  z-index: 10;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: var(--max-width-section);
+  margin: auto;
+  padding: var(--padding-container);
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.hero__learn-button {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 75%);
+  background-color: var(--button-color);
+  border-radius: var(--border-radius);
+  color: var(--button-text-color);
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  transition: var(--all-transitions);
+}
+
+.hero__learn-button:hover {
+  background-color: var(--button-color-active);
+}
+
+.hero__stars-image-container,
+.hero__moon-image-container,
+.hero__mountains-behind-image-container,
+.hero__mountains-front-image-container {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  pointer-events: none;
+}
+
+.hero__mountains-front-image-container {
+  z-index: 8;
+}
+
+.hero__stars-image,
+.hero__moon-image,
+.hero__mountains-behind-image,
+.hero__mountains-front-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__moon-image {
+  mix-blend-mode: screen;
+}
+
 @media (min-width: 854px) {
+
+  :root {
+    --padding-container: 0 0.75em;
+  }
 
   .header-nav__menu-icon-container,
   .header-nav__menu-close-icon-container {
