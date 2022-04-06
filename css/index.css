@@ -189,7 +189,8 @@
   transition: var(--all-transitions);
 }
 
-.hero__learn-button:hover {
+.hero__learn-button:hover,
+.hero__learn-button--active {
   background-color: var(--button-color-active);
 }
 
