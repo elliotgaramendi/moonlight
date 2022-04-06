@@ -3,7 +3,7 @@
   --primary-theme-color: #2b1055;
   --secondary-theme-color: #7597de;
   --text-color: #fff;
-  --shadow-color: #8888;
+  --shadow-color: #2b105580;
   --button-color: #61dafb;
   --button-color-active: #fff;
   --button-text-color: #000;
@@ -33,8 +33,8 @@
 }
 
 .header--scroll {
-  background-color: var(--primary-theme-color);
-  box-shadow: 0 0.125rem 0.125rem 0 var(--shadow-color);
+  background-color: var(--shadow-color);
+  box-shadow: 0 0.125rem 0.125rem 0 var(--secondary-theme-color);
 }
 
 .header-nav {
@@ -152,7 +152,7 @@
   bottom: 0;
   width: 100%;
   height: 6rem;
-  background-image: linear-gradient(to top, var(--primary-theme-color), transparent);
+  background-image: linear-gradient(transparent, var(--primary-theme-color));
   z-index: 10;
 }
 
@@ -167,9 +167,10 @@
 }
 
 .hero__title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   white-space: nowrap;
   z-index: 5;
+  margin: 0 0 0 45%;
 }
 
 .hero__learn-button {
@@ -181,7 +182,7 @@
   background-color: var(--button-color);
   border-radius: var(--border-radius);
   color: var(--button-text-color);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 800;
   padding: 0.5em 2em;
   text-decoration: none;
@@ -300,5 +301,10 @@
     opacity: 1;
     width: auto;
     pointer-events: auto;
+  }
+
+  .hero__learn-button {
+    font-size: 1.25rem;
+    top: 52.5%;
   }
 }
