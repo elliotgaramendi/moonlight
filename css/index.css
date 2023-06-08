@@ -33,17 +33,17 @@
 }
 
 .header--scroll {
-  background-color: var(--shadow-color);
   box-shadow: 0 0.125rem 0.125rem 0 var(--secondary-theme-color);
+  background-color: var(--shadow-color);
 }
 
 .header-nav {
-  padding: 0.5em 0;
+  padding: 1rem 0;
   transition: var(--all-transitions);
 }
 
 .header-nav--scroll {
-  padding: 0.25em 0;
+  padding: 0.5rem 0;
 }
 
 .header-nav-container {
@@ -57,10 +57,12 @@
 
 .header-nav__logo-container {
   display: flex;
-  height: 3rem;
+  width: 48px;
+  height: 48px;
 }
 
 .header-nav__logo {
+  width: 100%;
   height: 100%;
 }
 
@@ -121,7 +123,7 @@
 
 .header-nav__menu-close-icon-container {
   position: absolute;
-  top: 1rem;
+  top: 1.5rem;
   right: 2rem;
   height: 2rem;
   cursor: pointer;
@@ -186,10 +188,11 @@
   font-weight: 800;
   padding: 0.5em 2em;
   text-decoration: none;
-  transition: var(--all-transitions);
+  transition: background-color 0.25s;
 }
 
-.hero__learn-button:hover {
+.hero__learn-button:hover,
+.hero__learn-button--active {
   background-color: var(--button-color-active);
 }
 
@@ -284,7 +287,6 @@
 }
 
 @media (min-width: 854px) {
-
   :root {
     --padding-container: 0 0.75em;
   }

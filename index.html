@@ -3,15 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aprenda programación web con React</title>
+  <title>Moonlight I Elliot Garamendi el mejor desarrollador web</title>
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
 <body class="body">
@@ -19,7 +17,7 @@
     <nav class="header-nav">
       <div class="header-nav-container">
         <a href="#hero" class="header-nav__logo-container">
-          <img src="./img/logo.png" alt="Logo Web" class="header-nav__logo" />
+          <img src="./img/logo.webp" alt="Logo de la Web" class="header-nav__logo" width="48" height="48" />
         </a>
         <figure class="header-nav__menu-icon-container" id="headerNavMenuIconContainer">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="header-nav__menu-icon">
@@ -60,9 +58,9 @@
   <main class="main">
     <section class="hero" id="hero">
       <div class="hero__container">
-        <h2 class="hero__title">Aprenda programación web con React</h2>
+        <h1 class="hero__title">Aprenda programación web con React</h1>
       </div>
-      <a href="#learning" class="hero__learn-button">¡Aprender!</a>
+      <a href="#learning" class="hero__learn-button hero__learn-button--active">¡Aprender!</a>
       <figure class="hero__stars-image-container">
         <img src="./img/hero-stars.png" alt="Estrellas de fondo" class="hero__stars-image" />
       </figure>
@@ -85,7 +83,7 @@
           Rendering, Basic Hooks, Styled Components y más)
         </p>
         <div class="learning__topics">
-          <article class="learning__topic">
+          <div class="learning__topic">
             <div class="learning__topic-icon-container">
               <img src="./img/code.svg" alt="Ícono de etiqueta" class="learning__topic-icon" />
             </div>
@@ -94,9 +92,9 @@
               Extensión de la sintaxis de JavaScript. Recomendamos usarlo con React para describir cómo debería ser la
               interfaz de usuario.
             </p>
-          </article>
+          </div>
 
-          <article class="learning__topic">
+          <div class="learning__topic">
             <div class="learning__topic-icon-container">
               <img src="./img/shapes.svg" alt="Ícono de componentes" class="learning__topic-icon" />
             </div>
@@ -105,9 +103,9 @@
               Es un elemento de software visual que tiene su propio estado, recibe unas propiedades e implementa su
               propia lógica de renderizado.
             </p>
-          </article>
+          </div>
 
-          <article class="learning__topic">
+          <div class="learning__topic">
             <div class="learning__topic-icon-container">
               <img src="./img/paint.svg" alt="Ícono de estilos" class="learning__topic-icon" />
             </div>
@@ -115,7 +113,7 @@
             <p class="learning__topic-paragraph">
               Alternativa de mejorar CSS para diseñar componentes en React
             </p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
